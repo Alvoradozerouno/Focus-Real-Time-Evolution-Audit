@@ -1,0 +1,42 @@
+# Audit System Configuration
+# Settings for Genesis-level audit logging and verification
+
+audit:
+  # Genesis mode - track from system inception
+  genesis_mode: true
+  
+  # Cryptographic verification
+  verification:
+    # Enable hash-based verification
+    enable_verification: true
+    # Hash algorithm (sha256, sha512)
+    algorithm: sha256
+    # Verify on every access
+    continuous_verification: false
+  
+  # Audit logging
+  logging:
+    # Log level (INFO, WARNING, CRITICAL)
+    level: INFO
+    # Audit log file path
+    log_file: "logs/audit.log"
+    # Enable immutable log storage
+    immutable_storage: true
+  
+  # Genesis record
+  genesis:
+    # Track system milestones
+    track_milestones: true
+    # Enable state reconstruction
+    enable_reconstruction: true
+    # Maximum reconstruction lookback (days)
+    max_lookback_days: 365
+  
+  # Compliance
+  compliance:
+    # Export format (json, xml, csv)
+    export_format: json
+    # Retention period (days, -1 for infinite)
+    retention_days: -1
+    # Enable compliance reporting
+    enable_reporting: true

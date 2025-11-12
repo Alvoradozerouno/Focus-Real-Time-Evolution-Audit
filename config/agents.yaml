@@ -1,0 +1,52 @@
+# Agent Framework Configuration
+# Settings for ethical self-prompting agents
+
+agents:
+  # Default agent settings
+  defaults:
+    # Enable ethical constraints
+    enable_ethical_constraints: true
+    # Enable audit logging
+    enable_audit_logging: true
+    # Enable decision transparency
+    enable_transparency: true
+    # Maximum evolution steps
+    max_evolution_steps: 1000
+  
+  # Ethical constraints
+  ethics:
+    # Severity levels to enforce (CRITICAL, HIGH, MEDIUM, LOW)
+    enforce_levels:
+      - CRITICAL
+      - HIGH
+    # Block decisions that violate constraints
+    block_violations: true
+    # Log ethical checks
+    log_checks: true
+  
+  # EIRA-specific settings
+  eira:
+    # Enable reasoning history
+    enable_reasoning_history: true
+    # Self-prompting safety limits
+    self_prompt_max_iterations: 100
+    # Reasoning timeout (seconds)
+    reasoning_timeout: 30
+  
+  # Agent monitoring
+  monitoring:
+    # Track agent behavior
+    enable_monitoring: true
+    # Monitor interval (seconds)
+    monitor_interval: 60
+    # Alert on unusual behavior
+    enable_alerts: true
+  
+  # Human oversight
+  oversight:
+    # Require human approval for critical decisions
+    require_approval_critical: true
+    # Approval timeout (seconds)
+    approval_timeout: 300
+    # Default action on timeout (BLOCK, ALLOW)
+    timeout_action: BLOCK

@@ -1,0 +1,37 @@
+# OR1ON - Live-Evolving AI Kernel Stack
+# Python dependencies
+
+# Core dependencies
+# Currently using only Python standard library
+
+# Optional dependencies for enhanced functionality
+
+# Configuration file parsing (if YAML configs are loaded programmatically)
+# pyyaml>=6.0
+
+# For production deployments
+# gunicorn>=20.1.0  # Production WSGI server
+# uvicorn>=0.20.0   # ASGI server for async applications
+
+# For monitoring and metrics
+# prometheus-client>=0.16.0  # Metrics collection
+# psutil>=5.9.0              # System metrics
+
+# For data persistence (optional)
+# sqlalchemy>=2.0.0  # Database ORM
+# redis>=4.5.0       # Caching and pub/sub
+
+# For security enhancements (optional)
+# cryptography>=40.0.0  # Enhanced cryptographic operations
+# python-jose>=3.3.0    # JWT tokens
+# passlib>=1.7.4        # Password hashing
+
+# For testing and development
+# pytest>=7.3.0
+# pytest-cov>=4.0.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.0.0
+
+# Note: The current implementation uses only Python standard library
+# to maintain minimal dependencies. Install optional packages as needed.

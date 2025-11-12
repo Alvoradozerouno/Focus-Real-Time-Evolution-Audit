@@ -1,0 +1,93 @@
+# Security and Deployment Configuration
+# Settings for secure real-world deployment
+
+security:
+  # Authentication
+  authentication:
+    # Enable authentication
+    enabled: true
+    # Authentication method (token, oauth, certificate)
+    method: token
+    # Token expiration (seconds)
+    token_expiration: 3600
+  
+  # Authorization
+  authorization:
+    # Enable role-based access control
+    enable_rbac: true
+    # Default role for new users
+    default_role: viewer
+  
+  # Encryption
+  encryption:
+    # Enable encryption at rest
+    at_rest: true
+    # Enable encryption in transit
+    in_transit: true
+    # Encryption algorithm (AES256, ChaCha20)
+    algorithm: AES256
+  
+  # Network security
+  network:
+    # Enable firewall rules
+    enable_firewall: true
+    # Allowed IP ranges (CIDR notation)
+    allowed_ips:
+      - "10.0.0.0/8"
+      - "172.16.0.0/12"
+      - "192.168.0.0/16"
+    # Rate limiting
+    rate_limit:
+      enabled: true
+      max_requests_per_minute: 1000
+
+deployment:
+  # Environment settings
+  environment:
+    # Environment type (development, staging, production)
+    type: production
+    # Enable debug mode
+    debug: false
+    # Verbose logging
+    verbose: false
+  
+  # Scaling
+  scaling:
+    # Auto-scaling enabled
+    auto_scaling: true
+    # Minimum instances
+    min_instances: 2
+    # Maximum instances
+    max_instances: 10
+  
+  # Monitoring
+  monitoring:
+    # Enable system monitoring
+    enabled: true
+    # Metrics collection interval (seconds)
+    metrics_interval: 60
+    # Enable alerting
+    enable_alerts: true
+    # Alert channels (email, slack, pagerduty)
+    alert_channels:
+      - email
+  
+  # Backup
+  backup:
+    # Enable automated backups
+    enabled: true
+    # Backup interval (hours)
+    interval_hours: 24
+    # Backup retention (days)
+    retention_days: 30
+    # Backup location
+    location: "s3://backups/or1on"
+  
+  # Health checks
+  health:
+    # Enable health checks
+    enabled: true
+    # Health check interval (seconds)
+    interval: 30
+    # Unhealthy threshold
+    unhealthy_threshold: 3

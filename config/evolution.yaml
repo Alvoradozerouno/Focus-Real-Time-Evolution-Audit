@@ -1,0 +1,38 @@
+# Evolution Tracking Configuration
+# Settings for real-time AI system evolution monitoring
+
+evolution:
+  # Enable real-time change detection
+  enable_realtime: true
+  
+  # Snapshot capture settings
+  snapshot:
+    # Automatic snapshot interval (seconds)
+    auto_capture_interval: 300
+    # Maximum snapshots to retain
+    max_snapshots: 1000
+    # Compress old snapshots
+    enable_compression: true
+  
+  # Evolution logging
+  logging:
+    # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+    level: INFO
+    # Log file path
+    log_file: "logs/evolution.log"
+    # Enable console output
+    console_output: true
+  
+  # Pattern analysis
+  analysis:
+    # Enable evolution pattern detection
+    enable_pattern_detection: true
+    # Minimum pattern confidence threshold
+    pattern_threshold: 0.75
+  
+  # Rollback settings
+  rollback:
+    # Enable rollback capability
+    enable_rollback: true
+    # Require confirmation for rollback
+    require_confirmation: true
